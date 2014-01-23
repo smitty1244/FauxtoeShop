@@ -107,8 +107,8 @@ public class FileChooser
     // try to find the images directory
       try {
         // get the URL for where we loaded this class 
-        Class currClass = Class.forName("FileChooser");
-        URL classURL = currClass.getResource("FileChooser.class");
+        //Class currClass = Class.forName("FileChooser");
+        URL classURL = FileChooser.class.getResource("FileChooser.class");
         URL fileURL = new URL(classURL,"../images/");
         directory = fileURL.getPath();
         directory = URLDecoder.decode(directory, "UTF-8");
